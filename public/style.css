@@ -1,0 +1,245 @@
+/* ============= */
+/* ==== MAIN === */
+/* ============= */
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.margin-10 {
+	margin: 0 5% 0 5%;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	display: inline-block;
+	height: 100%;
+}
+
+/* === SCROLLBAR === */
+
+/* width */
+body::-webkit-scrollbar {
+	width: 0;
+}
+
+#first-slider::-webkit-scrollbar,
+#second-slider::-webkit-scrollbar,
+#video-cont::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+/* Track */
+#first-slider::-webkit-scrollbar-track,
+#second-slider::-webkit-scrollbar-track,
+#video-cont::-webkit-scrollbar-track {
+	background: none;
+}
+
+/* Handle */
+#first-slider::-webkit-scrollbar-thumb,
+#second-slider::-webkit-scrollbar-thumb,
+#video-cont::-webkit-scrollbar-thumb {
+	background: rgb(0, 155, 159);
+}
+
+/* ============== */
+/* === HEADER === */
+/* ============== */
+
+.header-class{
+   /* d-flex justify-content-between align-items-center */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header#primary-header {
+	background-image: url("./img/header.png");
+	background-position: center top;
+	height: 20%;
+	min-height: 90px;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	z-index: 99;
+}
+
+header#primary-header img {
+	width: auto;
+	height: 100%;
+}
+
+header.fixed#primary-header {
+	position: fixed;
+}
+
+#logo {
+	height: 75%;
+}
+
+/* ==================== */
+/* === OVERLAY MENU === */
+/* ==================== */
+
+#overlay-menu {
+	background-color: #009b9f;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	padding-top: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+#overlay-menu.active {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.8s;
+}
+
+/* === LOGO AND BUTTON === */
+
+#secondary-header {
+	background: none;
+	height: 20%;
+	min-height: 70px;
+	background-size: cover;
+	position: static;
+	width: 100%;
+	z-index: 99;
+}
+
+#secondary-header img {
+	width: auto;
+	height: 100%;
+}
+
+/* === NAV === */
+
+#primary-nav a,
+#primary-nav a:hover {
+	font-weight: 600;
+	color: white;
+	text-decoration: none;
+	font-size: 40px;
+	margin-bottom: 15px;
+	display: inline-block;
+	padding: 10px 10px 15px 15px;
+}
+
+#primary-nav a:hover {
+	background-color: #aed6d6;
+}
+
+.container.overlay {
+	padding-top: 10px;
+}
+
+/* === GENERICSTUFF === */
+
+#invisible-padding {
+	height: 20%;
+	min-height: 90px;
+	max-height: 150px;
+}
+
+/* ================== */
+/* === HAMBURGERG === */
+/* ================== */
+
+.hamburger {
+	float: right;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+	background-color: white;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	background-color: #009b9f;
+}
+
+@media screen and (max-width: 645px) {
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after {
+		background-color: rgba(148, 8, 11, .8);
+	}
+}
+
+/* ================= */
+/* === MAIN AREA === */
+/* ================= */
+
+#spacer-top {
+	height: 20%;
+	min-height: 90px;
+}
+
+#starter {
+	padding-top: 100px;
+}
+
+.title {
+	margin: 70px 0 20px 0;
+}
+
+.title h2 {
+	font-weight: 700;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.title img {
+	width: auto;
+	height: 40px;
+}
+
+#first-slider,
+#second-slider {
+	height: 400px;
+	overflow-y: visible;
+	overflow-x: hidden;
+}
+
+.card {
+	margin: 15px 0 0 0;
+	width: 17rem;
+	transition: width 0.3s ease-in-out;
+}
+
+.card:hover {
+	width: 18rem;
+}
+
+.center {
+	padding-right: 0;
+}
+
+/* === VIDEO SECTION === */
+.testimonial-group > .row {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+.testimonial-group > .row > .col-xs-4 {
+	display: inline-block;
+	float: none;
+}
+
+/* Decorations */
+
+#video-cont {
+	overflow-x: scroll;
+}
