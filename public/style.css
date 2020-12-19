@@ -228,6 +228,89 @@ header.fixed#primary-header {
 	padding-right: 0;
 }
 
+.container{
+   display: flex;
+	flex-direction: column;
+	margin-bottom: 10%;
+}
+.container-notizie{
+   display: flex;
+   flex-direction: column;
+}
+.notizie{
+   display: flex;
+   justify-content: start;
+   min-width: 200px;
+   flex-wrap: wrap;
+
+}
+.container-commenti{
+   display: flex;
+	flex-direction: column;
+}
+
+.banner-container{
+	background-color: #009b9f;
+	height: 50vh;
+	width: 100%;
+	margin-bottom: 10%;
+}
+.link-sentieri{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+   top: 60%;
+}
+
+.banner-container::before{
+	content: "";
+	
+	background-image: url(/public/img/logo-casa-sentieriBANNER.svg);
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+/* .immagine-banner{
+   background-image: url(/public/img/logo-casa-sentieriBANNER.svg);
+	position: relative;
+    width: 70%;
+	 height: 75%;
+	 display: block;
+   background-repeat: no-repeat;
+   background-position: center top;
+} */
+
+/* ====MOBILE===== */
+@media screen and (min-width: 300px){
+   .notizie{
+      width: 85%;
+   }
+   .commenti{
+      width: 85%;
+   }
+   .banner-container{
+      flex-direction: column;
+   }
+}
+
+/* =====DESKTOP====== */
+@media screen and (min-width: 700px){
+
+}
+
+
+
+
+
+
+
+
 /* === VIDEO SECTION === */
 .testimonial-group > .row {
 	overflow-x: auto;
@@ -242,4 +325,49 @@ header.fixed#primary-header {
 
 #video-cont {
 	overflow-x: scroll;
+}
+
+
+/* storia */
+
+.contenutostoria{
+	margin-left: 5%;
+	margin-right:5%
+} 
+
+.contenutostoria h1{
+	text-align: center;
+	padding: 1em;
+    font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.contenutostoria h4{
+	font-weight: bold;
+	font-weight: 700;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: center;
+	
+}
+.contenutostoria p{ 
+	text-align: left;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
+
+} 
+.contenutostoria img {
+	width: auto;
+	height: 40px;
+	
+
+
+} 
+.immagine{
+	display: flex;
+
 }
