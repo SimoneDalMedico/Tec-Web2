@@ -248,7 +248,12 @@ header.fixed#primary-header {
    display: flex;
 	flex-direction: column;
 }
-
+.container-col{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5%;
+	padding: 0% 10% 0% 10%;
+}
 
 .container-associazioni{
 	display: flex;
@@ -269,6 +274,7 @@ header.fixed#primary-header {
 	width: 100%;
 	flex-wrap: wrap;
 	min-width: 200px;
+	padding: 0 10% 0 10%;
 }
 /* ====MOBILE===== */
 @media screen and (min-width: 300px){
