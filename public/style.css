@@ -249,42 +249,6 @@ header.fixed#primary-header {
 	flex-direction: column;
 }
 
-.banner-container{
-	background-color: #009b9f;
-	height: 50vh;
-	width: 100%;
-	margin-bottom: 10%;
-}
-.link-sentieri{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: relative;
-   top: 60%;
-}
-
-.banner-container::before{
-	content: "";
-	
-	background-image: url(/public/img/logo-casa-sentieriBANNER.svg);
-
-	background-size: cover;
-	background-repeat: no-repeat;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-}
-/* .immagine-banner{
-   background-image: url(/public/img/logo-casa-sentieriBANNER.svg);
-	position: relative;
-    width: 70%;
-	 height: 75%;
-	 display: block;
-   background-repeat: no-repeat;
-   background-position: center top;
-} */
 
 .container-associazioni{
 	display: flex;
@@ -294,7 +258,18 @@ header.fixed#primary-header {
 	min-width: 150px;
 	flex-wrap: wrap;
 }
-
+.container-video{
+	display: flex;
+	flex-direction: column;
+}
+.video{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	flex-wrap: wrap;
+	min-width: 200px;
+}
 /* ====MOBILE===== */
 @media screen and (min-width: 300px){
    .notizie{
@@ -303,13 +278,117 @@ header.fixed#primary-header {
    .commenti{
       width: 85%;
    }
-   .banner-container{
-      flex-direction: column;
+   #index-banner-cont{
+		height: 60vh;
+		background-color: #aed6d6;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: bottom;
+		overflow: hidden;
+	}
+	#index-banner-cont::before{
+		content: "";
+		background-image: url("../public/img/logo-casa-sentieriBANNER.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 80%;
+		width: 100%;
+		transform: translateY(-35%);
+		-webkit-transform: translateY(-35%);
+		-moz-transform: translateY(-35%);
+		-ms-transform: translateY(-35%);
+		-o-transform: translateY(-35%);
+	}
+	#banner-text-cont{
+		height: 50%;
+		padding-top: 3%;
+		position: absolute;
+		bottom: 0;
+		/* padding: 2rem; */
+		text-align: center;
+	}
+	.link-sentieri{
+		margin: 2vh 0;
+		text-decoration: none;
+		letter-spacing: 0.3em; 
+		
+	}
+	.link-sentieri a{
+		
+		color:rgba(148, 8, 11, .8);
+		font-size: 1.1em;
+	}
+	
+	.arrow{
+		/* letter-spacing: 0.6em; */
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		color: #c65852;
+		line-height: 50px;
+		text-align: center;
+		border: 1px solid #c65852;
+		padding: 1px 1px 1px 6px;
    }
+	/* .button-iscriviti{
+		margin-top: 1vh;
+	} */
+	.button-iscriviti a{
+		padding: 0.5rem 5rem;
+		background-color: #c65852;
+		height: auto;
+		margin: 0 auto;
+		text-decoration: none;
+		color: #aed6d6;
+		font-size: 1.5em;
+	}
 }
 
 /* =====DESKTOP====== */
-@media screen and (min-width: 700px){
+@media screen and (min-width: 412px){
+	.container{
+		flex-direction: row;
+	}
+	.container-notizie{
+		width: 75%;
+	}
+	.container-commenti{
+		width: 35%;
+	}
+	.notizie{
+		width: 92%;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.commenti{
+		width: 100%;
+	}
+
+	#index-banner-cont{
+		flex-direction: row;
+		align-items:center;
+	}
+	#index-banner-cont::before{
+		content: "";
+		background-image: url("../public/img/logo-casa-sentieriBANNER.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 120%;
+		width: 60%;
+		transform: translate(-12%,-18%);
+		-webkit-transform: translate(-12%,-18%);
+		-moz-transform: translate(-12%,-18%);
+		-ms-transform: translate(-12%,-18%);
+		-o-transform: translate(-12%,-18%);
+	}
+	.banner-container{
+
+	}
+	#banner-text-cont{
+		left: 45%;
+		bottom: 20%;
+	}
 
 }
 
